@@ -2,23 +2,18 @@ function func = newton(data, x)
     func = 0.0;
     u = data(1,:);
     %a = size(data(1,:));
-    r = zeros(4);
+    r = zeros(5);
     r(:,1) = data(2,:);
     disp("u = "+ data)
     disp(u);
     disp(r);
     disp("r == " + r(2,1));
-    for j = 2:1:4
-        z = 4;
-        for i = 6-j :(-j+1):2
-            q = r(i,j-1)-r(i-1,j-1);
-            w = u(z)- u(z+1-j);
-            disp("i = " +i);
-            disp("j = " +j);
-            disp("q = " +q);
-            disp("w = " +w);
-             disp("q/w = " +q/w);
-            r(i-1,j) = q/w;
+    for j = 1:1:5
+        z = 5;
+        for i = 5-j :-1:1
+            q = r(i+1,j)-r(i,j);
+            w = u(z)- u(z-j);
+            r(i,j+1) = q/w;
             z = z-1;
         end
     end
