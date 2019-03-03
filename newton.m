@@ -1,7 +1,6 @@
 function func = newton(data, x)
     func = 0.0;
     u = data(1,:);
-    
     r = zeros(4);
     r(:,1) = data(2,:);
     for j = 1:1:size(u,2)
