@@ -4,24 +4,25 @@ function func = newton(data, x)
     %a = size(data(1,:));
     r = zeros(4);
     r(:,1) = data(2,:);
-    disp("u = "+ data)
-    disp(u);
-    disp(r);
-    disp("r == " + r(2,1));
-    for j = 1:1:4
-        z = 4;
-        for i = j :(-j+1):2
-            q = r(i,j-1)-r(i-1,j-1);
-            w = u(z)- u(z+1-j);
-            disp("i = " +i);
-            disp("j = " +j);
-            disp("q = " +q);
-            disp("w = " +w);
-             disp("q/w = " +q/w);
-            r(i-1,j) = q/w;
+    for j = 1:1:size(u,2)
+        z = size(u,2);
+        for i = size(u,2)-j :-1:1
+            q = r(i+1,j)-r(i,j);
+            w = u(z)- u(z-j);
+            r(i,j+1) = q/w;
             z = z-1;
         end
     end
+        %func = func + r(1,1);
+        base = 1;
+    for i = 1:1:size(u,2)
+        for j = 1:1:i-1
+            disp(
+            base = base * (x-u(j));      
+        end
+        func = func + r(1,i)*base;
+    end
+    disp("lin is " + func);
     disp(r)
             
     
