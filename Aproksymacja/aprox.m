@@ -20,5 +20,9 @@ for k = 0:1:2
     end
 end
 z = y\v;
-fplot(poly2sym(z), "r");
+scatter(x(1,:), x(2,:), "b");
+hold on
+
+fplot(poly2sym(fliplr(z.')), "r");
+hold off
 disp(z);

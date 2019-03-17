@@ -15,9 +15,15 @@ y = zeros(3,3);
 for k = 0:1:2
     for l = 0:2
         for m = 1:5
-            y(k+1, l+1) = y(k+1, l+1) + x(1,m).^(k+1*l);
+            y(k+1, l+1) = y(k+1, l+1) + x(1,m).^(k+l);
         end
     end
 end
-
-disp(y);
+z = y\v;
+scatter(x(1,:), x(2,:), "b");
+hold on
+disp(z);
+disp(fliplr(z.));
+fplot(poly2sym(fliplr(z)), "r");
+hold off
+disp(z);
