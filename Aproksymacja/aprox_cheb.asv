@@ -14,8 +14,18 @@ y = zeros(3,3);
 for k = 0:2
     for l = 0:2
         for m = 1:5
-            y(k+1, l+1) = y(k+1, l+1) + (chebyshev(x(1,1), x(1,5), x(1,m), i)* chebyshev(x(1,1), x(1,5), x(1,m), j))) ;
+            y(k+1, l+1) = y(k+1, l+1) + (chebyshev(x(1,1), x(1,5), x(1,m), k)* chebyshev(x(1,1), x(1,5), x(1,m), l)) ;
         end
     end
 end
-disp(y);
+z = y\v;
+
+disp(fliplr(z.'));
+ 
+
+%scatter(x(1,:), x(2,:), "b");
+%hold on
+plot(1*z(1
+%fplot(poly2sym(fliplr(z.')), "r");
+%hold off
+%disp(z);
