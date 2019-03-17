@@ -6,6 +6,9 @@ v = zeros(3,1);
 disp(a);
 for i = 0:1:2
     for j = 1:5
-        v(i+1,1) = v(i+1,1) + (x(1,j).^i) * (x(2,j));
+        v(i+1,1) = v(i+1,1) + chebyshev(x(1,1), x(1,5), x(1,j), i)*x(2,j);
     end
 end
+
+
+disp(v);

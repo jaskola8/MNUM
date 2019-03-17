@@ -1,4 +1,5 @@
-function func = chebyshev(x, k)
+function func = chebyshev(a, b, l, k)
+    x = (2*l-a-b)/(b-a);
     if k == 0
         func = 1;
         return
