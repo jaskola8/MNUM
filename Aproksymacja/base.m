@@ -10,5 +10,5 @@ for i = 0:k
         end
     end
 end
-x = B\A;
+x = poly2sym(fliplr((B\A).'));
 return

@@ -4,6 +4,6 @@ B = zeros(k+1,k+1);
 fx = base(A,B,k,data);
 scatter(data(:,1), data(:,2), "b");
 hold on
-fplot(poly2sym(fliplr(fx.')), "r");
+fplot(fx, "r");
 hold off
 disp(fx);

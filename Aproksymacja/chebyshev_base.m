@@ -12,5 +12,15 @@ for i = 0:k
         end
     end
 end
-x = B\A;
-return
+z = B\A;
+%fliplr(z.');
+disp(z);
+
+if k == 2
+    x = @(g) z(1,1)+g.*z(2,1) + (2*g.^2-1)*z(3,1);
+    return
+end
+if k == 1
+    x = @(g) z(1,1) + (g.*z(2,1));
+    return
+end
