@@ -1,8 +1,9 @@
-function x = base(A, B, k, data)
-c = size(data, 1);
+function x = chebyshev_base(A, B, k, data)
+[c, r] = size(data);
 for i = 0:k
     for j = 1:c
          A(i+1,1) = A(i+1,1) + (data(j,1).^i) * (data(j,2));
+         A(i+1,1) = A(i+1,1) + chebyshev(data(1,1), data(1,c), x(1,j), i)*x(2,j);
     end
      for l = 0:k
         for m = 1:c
