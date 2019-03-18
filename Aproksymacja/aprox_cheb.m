@@ -1,3 +1,4 @@
+
 function x = aprox_cheb()
 x = [0 0.5 1 1.5 2; 0 0.19 0.26 0.29 0.31];
 disp(x);
