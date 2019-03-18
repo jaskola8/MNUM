@@ -25,7 +25,7 @@ fliplr(z.');
 disp(z);
 scatter(x(1,:), x(2,:), "b");
 hold on
-suka = @(g) z(1,1)+g.*z(2,1) + (2*g.^2-1)*z(3,1);
+suka = @(g) z(1,1)+(g-1).*z(2,1) + (2*(g-1).^2-1)*z(3,1);
 fplot(suka, "r");
 %fplot(poly2sym(fliplr(z.')), "r");
 hold off
