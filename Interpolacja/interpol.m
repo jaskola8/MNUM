@@ -20,9 +20,13 @@ for i = 1:1000
     xs(8,i) = legrange(dataChev, xs(5,i));
     
 end
+
 figure(1)
 plot(xs(5,:),xs(6,:), "g",xs(5,:),xs(7,:), "r--",  xs(5,:),xs(8,:), "b")
 figure(2)
 plot(xs(1,:),xs(2,:), "g",xs(1,:),xs(3,:), "r--", xs(1,:),xs(4,:), "b")
+%plot(xs(5,:),xs(6,:), "g",xs(5,:),xs(7,:), "r--")%,  xs(5,:),xs(8,:), "b")
+plot(xs(1,:),xs(2,:), "g",xs(1,:),xs(3,:), "r--")%, xs(1,:),xs(4,:), "b")
+
         
    
