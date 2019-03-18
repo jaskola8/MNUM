@@ -10,5 +10,6 @@ for i = 0:k
         end
     end
 end
+disp(fliplr((B\A)));
 x = poly2sym(fliplr((B\A).'));
 return
