@@ -4,7 +4,7 @@ function x = aprox()
 x = [0 0.5 1 1.5 2; 0 0.19 0.26 0.29 0.31];
 disp(x);
 v = zeros(3,1);
-[a, b] = size(v);
+[a, ~] = size(v);
 disp(a);
 for i = 0:1:2
     for j = 1:5
