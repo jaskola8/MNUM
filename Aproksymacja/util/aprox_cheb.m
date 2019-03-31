@@ -25,8 +25,11 @@ fliplr(z.');
 disp(z);
 scatter(x(1,:), x(2,:), "b");
 hold on
-suka = @(g) z(1,1)+(g-1).*z(2,1) + (2*(g-1).^2-1)*z(3,1);
-fplot(suka, "r");
+funkcja = @(g) z(1,1)+(g).*z(2,1) + (2*(g).^2-1)*z(3,1);
+funkcja(2.5)
+gg = linspace(-0.5, 2.5, 1000);
+plot(gg, funkcja(gg), "r");
+%fplot(funkcja, "r");
 %fplot(poly2sym(fliplr(z.')), "r");
 hold off
 %disp(z);

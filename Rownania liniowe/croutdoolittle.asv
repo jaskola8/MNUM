@@ -1,0 +1,54 @@
+function [R, L] = croutdoolittle(A)
+    msize = size(A);
+    R = zeros(msize);
+    L = zeros(msize);
+    for i = 1:msize
+        R(1, i) = A(1, i);
+    end
+    for i = 2:msize
+        L(i, 1) = A(i, 1);
+    end
+    for k = 2:msize
+        for i = k:msize
+            R(k, i) = A(k ,i);
+            R(k, i) = R(k, i);
+            for j = 1:k-1
+                R(k, i) = R(k, i) - L(k, j) * R(j, i);
+            end
+            if not(i == k)
+                L(i, k) = A(i, k);
+                L(i, k) = L(i, k);
+                for j = 1:k-1
+                    L(i, k) = L(i, k) - L(i, j) * R(j, k);
+                end
+                L(i, k) = L(i, k) / R(k, k);
+            end
+        end
+    end
+end
+%     for i = 1:msize
+%        for j = 1:msize
+%            if i == 1
+%                R(i, j) = A(i, j);
+%            else
+%                if j >= i
+%                    R(i, j) = A(i ,j);
+%                    for p = 1:i-1
+%                        R(i, j) = R(i, j) - L(i, p) * R(p ,j);
+%                    end
+%                end
+%            end
+%            if j == 1
+%                L(i , j) = A(i ,j) / R(1, 1);
+%            else
+%                if i >= j
+%                    L(i, j) = A(i, j);
+%                    for p = 1:j-1
+%                        L(i, j) = L(i, j) - L(i, p) * R(p, j);
+%                    end
+%                L(i, j) = L(i, j) / R(j, j);
+%                end
+%            end        
+%        end
+%     end
+end

@@ -1,0 +1,1 @@
+W celu sprawdzenia dzialania skryptów nalezy uruchomic funkcje main w skrypcie main.m.
