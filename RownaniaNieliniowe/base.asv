@@ -1,0 +1,11 @@
+function x = base(coeff, x0, e, N)
+    for i=1:N
+       dx = polyder(coeff);
+       x0 = x0 - polyval(coe
+       if (abs(func(x0))-e <= 0)
+           x = x0;
+           return
+       end
+    end
+    x = x0;
+return
