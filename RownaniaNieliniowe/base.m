@@ -1,4 +1,5 @@
 function x = base(coeff, x0, e, N)
+%    x0 = stop-start;
     dx = polyder(coeff);
     for i=1:N
        x0 = x0 - (polyval(coeff, x0)/polyval(dx,x0));
