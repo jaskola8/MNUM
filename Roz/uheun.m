@@ -1,4 +1,4 @@
-function uheun(f, ft, h, y0, x0, t0, min, max)
+function wuh = uheun(f, ft, h, y0, x0, t0, min, max)
     w_count = length(min:h:max);
     w = zeros(3,w_count);
     w(:,1) = [x0, y0, t0];
@@ -12,4 +12,5 @@ function uheun(f, ft, h, y0, x0, t0, min, max)
         w(:,i) = [xn, yn, tn];
      end 
         disp(w);
+        wuh = w;
 end

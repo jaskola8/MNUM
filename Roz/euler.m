@@ -1,4 +1,4 @@
-function euler(f, h, y0, x0, min, max)
+function we = euler(f, h, y0, x0, min, max)
     w_count = length(min:h:max);
     w = zeros(2,w_count);
     w(:,1) = [x0; y0];
@@ -9,6 +9,6 @@ function euler(f, h, y0, x0, min, max)
         yn = dy + h*f(dx,dy);
         w(:,i) = [xn,yn];
     end
-    disp(w);
+    we = w;
 end
 
