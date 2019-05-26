@@ -11,6 +11,5 @@ function wuh = uheun(f, ft, h, y0, x0, t0, min, max)
         tn = dt + h;
         w(:,i) = [xn, yn, tn];
      end 
-        disp(w);
         wuh = w;
 end
