@@ -10,7 +10,7 @@ for i = 1:3
     b_count = length(0:h(i):10);
     b = zeros(3,b_count);
     for j = 1:b_count
-        b(:,j) = [wt(1,j), abs(wt(1,j) - we(1, j)),  abs(wt(1,j) - wh(1, j))];
+        b(:,j) = [wt(2,j), abs(wt(2,j) - we(1, j)),  abs(wt(2,j) - wh(1, j))];
     end
     disp(max(b(2,:)));
     disp(max(b(3,:)));

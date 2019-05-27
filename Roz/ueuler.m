@@ -9,7 +9,7 @@ function wue = ueuler(f, ft, h, y0, x0, t0, min, max)
         xn = dx + h*f(dx, dy, dt);
         yn = dy + h*ft(dx, dy, dt);
         tn = dt + h;
-        w(:,i) = [xn,yn,tn];
+        w(:,i) = [xn, yn, tn];
     end
     wue = w;
 end
