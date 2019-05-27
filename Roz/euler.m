@@ -7,7 +7,7 @@ function we = euler(f, h, y0, x0, min, max)
         dy = w(2, i-1);
         xn = dx + h;
         yn = dy + h*f(dx,dy);
-        w(:,i) = [xn,yn];
+        w(:,i) = [xn, yn];
     end
     we = w;
 end
